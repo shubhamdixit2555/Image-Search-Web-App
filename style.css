@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+body {
+  line-height: 1.5;
+}
+body, div, h1{
+  background-color: #27272A;
+}
+h1 {
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  color: white;
+}
+.input{
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  width: 50vw;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #3D3D44;
+  gap: 15px;
+  color: teal;
+}
+.fn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 35px;
+}
+#search-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+#search-input:focus{
+  outline: none;
+  border: none;
+}
+.btn {
+  padding: 10px 20px;
+  height: 6vh;
+  background-color: teal;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-load {
+  position: relative;
+  left: 50%;
+  margin: 10px;
+  transform: translate(-50%);
+  display: none;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 128, 128, 0.801);
+  color: black;
+}
+.search-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+.search-results img{
+    background-position: center;
+    background-size: contain;
+}
+.search-result {
+  border: 1px solid black;
+  overflow: hidden;
+}
+.search-result img {
+  height: 300px;
+  width: 100%;
+}
+.search-result img:hover {
+  opacity: 0.8;
+}
+.search-result a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+}
+.search-result a:hover {
+  color: darkcyan;
+}
+
+@media (max-width: 700px) {
+  .search-results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .search-results {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 25px;
+  }
+  .fn {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+}
